@@ -1,9 +1,9 @@
 <configuration>
-    <property name="LOG_FILE" value="./logs/log.txt" />
+    <property name="LOG_FILE" value="./logs/log.txt"/>
 
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d [%thread] %-5level  %logger{35} - %msg%n</pattern>
+            <pattern>%d [%thread] %-5level %logger{35} - %msg%n</pattern>
         </encoder>
     </appender>
 
@@ -24,8 +24,8 @@
     </appender>
 
     <root level="INFO">
-        <appender-ref ref="CONSOLE" />
-        <appender-ref ref="ROLLIN" />
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="ROLLIN"/>
     </root>
 
     <jmxConfigurator/>

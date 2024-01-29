@@ -47,8 +47,6 @@ class BudgetApiKtTest : ServerTest() {
         addRecord(BudgetRecord(2020, 1, 30, BudgetType.Приход))
         addRecord(BudgetRecord(2020, 5, 400, BudgetType.Приход))
 
-        // expected sort order - month ascending, amount descending
-
         RestAssured.given()
             .get("/budget/year/2020/stats?limit=100&offset=0")
             .toResponse<BudgetYearStatsResponse>().let { response ->

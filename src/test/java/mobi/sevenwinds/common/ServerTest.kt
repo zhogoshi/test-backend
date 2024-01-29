@@ -24,7 +24,7 @@ open class ServerTest {
         fun startServer() {
             if (!serverStarted) {
                 server = embeddedServer(Netty, environment = applicationEngineEnvironment {
-                    config = HoconApplicationConfig(ConfigFactory.load("test.conf"))
+                    config = HoconApplicationConfig(ConfigFactory.load("application.conf"))
 
                     connector {
                         port = config.property("ktor.deployment.port").getString().toInt()
